@@ -1,6 +1,5 @@
 <div>
     <form action="#">
-    {{ json_encode($state) }}
         <div class="flex items-center">
             <input type="checkbox" name="published" id="published" class="mr-2" wire:model="state.published">
             <label for="published" class="inline-block">Published</label>

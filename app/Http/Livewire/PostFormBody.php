@@ -16,11 +16,14 @@ class PostFormBody extends Component
         'state.body.required' => 'The body is required.'
     ];
 
+    public function updatedState()
+    {
+        $this->emit('mergeState', $this->state);
+    }
+
     public function submit()
     {
         $this->validate();
-
-        // merge state
 
         $this->emit('goToStep', 3);
     }

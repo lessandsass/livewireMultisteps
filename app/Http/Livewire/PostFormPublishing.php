@@ -9,12 +9,15 @@ class PostFormPublishing extends Component
 
     public $state = [];
 
+    public function updatedState()
+    {
+        $this->emit('mergeState', $this->state);
+    }
+
     public function submit()
     {
 
-        // merge state
-
-        dd('store');
+        $this->emit('store'); 
     }
 
     public function render()

@@ -1,8 +1,7 @@
 <div>
     <form action="#">
-    {{ json_encode($state) }}
         <label for="title" class="mb-1 inline-block">Title</label>
-        <input type="text" name="title" id="title" class="border-2 rounded-lg w-full p-2" wire:model="state.title">
+        <input type="text" name="title" id="title" class="border-2 rounded-lg w-full p-2" wire:model.defer="state.title">
 
         @error('state.title')
             <div class="text-red-500 text-sm mt-2">

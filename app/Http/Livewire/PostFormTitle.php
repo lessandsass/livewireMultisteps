@@ -17,11 +17,14 @@ class PostFormTitle extends Component
         'state.title.required' => 'The title is required.'
     ];
 
+    public function updatedState()
+    {
+        $this->emit('mergeState', $this->state);
+    }
+
     public function submit()
     {
         $this->validate();
-
-        // merge state
 
         $this->emit('goToStep', 2);
     }

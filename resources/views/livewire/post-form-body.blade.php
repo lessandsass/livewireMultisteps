@@ -1,9 +1,7 @@
 <div>
     <form action="#">
-
-        {{ json_encode($state) }}
         <label for="body" class="mb-1 inline-block">Body</label>
-        <textarea type="text" name="body" id="body" class="border-2 rounded-lg w-full p-2" wire:model="state.body"></textarea>
+        <textarea type="text" name="body" id="body" class="border-2 rounded-lg w-full p-2" wire:model.defer="state.body"></textarea>
 
         @error('state.body')
             <div class="text-red-500 text-sm mt-2">
